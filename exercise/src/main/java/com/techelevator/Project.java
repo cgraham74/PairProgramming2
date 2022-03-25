@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Project {
-    private String name = "";
-    private String description = "";
+    private String name;
+    private String description;
     private LocalDate startDate;
     private LocalDate dueDate;
     private List<Employee> teamMembers;

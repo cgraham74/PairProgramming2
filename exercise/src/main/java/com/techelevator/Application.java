@@ -58,7 +58,6 @@ public class Application {
         departments.add(new Department(1, "Marketing"));
         departments.add(new Department(2, "Sales"));
         departments.add(new Department(3, "Engineering"));
-
     }
 
     /**
@@ -69,7 +68,6 @@ public class Application {
         for(Department name: departments){
             System.out.println(name.getName());
         }
-
     }
 
     /**
@@ -98,9 +96,8 @@ public class Application {
         System.out.println("\n------------- EMPLOYEES ------------------------------");
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         for (Employee name: employees){
-            System.out.println(name.getFullName() + " " + " (" + currency.format(name.getSalary()) + ") " + name.getDepartment().getName());
+            System.out.println(name.getFullName()  + " (" + currency.format(name.getSalary()) + ") " + name.getDepartment().getName());
         }
-
     }
 
     /**
@@ -110,7 +107,6 @@ public class Application {
         Project project = new Project("TEams", "Projects Management Software", today , today.plusDays(30));
         project.setTeamMembers(employees.stream().filter(employee -> employee.getDepartment().getName().equalsIgnoreCase("Engineering")).collect(Collectors.toList()));
         projects.put(project.getName(),project);
-
     }
 
     /**
@@ -120,7 +116,6 @@ public class Application {
         Project project = new Project("Marketing Landing Page", "Lead Capture Landing Page for Marketing",today.plusDays(31), today.plusDays(38));
         project.setTeamMembers(employees.stream().filter(employee -> employee.getDepartment().getName().equalsIgnoreCase("Marketing")).collect(Collectors.toList()));
         projects.put(project.getName(),project);
-
     }
 
     /**
@@ -131,7 +126,5 @@ public class Application {
         for(String name: projects.keySet()){
             System.out.println(name + ": " + projects.get(name).getTeamMembers().size());
         }
-
     }
-
 }
