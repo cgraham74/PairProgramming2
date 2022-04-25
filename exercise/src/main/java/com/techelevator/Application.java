@@ -85,6 +85,7 @@ public class Application {
         dean.setHireDate(today);
         dean.setDepartment(departments.get(2));
         employees.add(dean);
+
         employees.add(new Employee(2, "Angie", "Smith", "asmith@teams.com", departments.get(2), LocalDate.now()));
         employees.add(new Employee(3,"Margaret", "Thompson", "mthompson@teams.com", departments.get(0), LocalDate.now()));
     }
